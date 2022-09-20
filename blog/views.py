@@ -6,7 +6,7 @@ from . models import Post
 def post_list(request):
     posts = Post.published.all()
     context = {'posts': posts}
-    return render(request, 'blog/list.html', context)
+    return render(request, 'post/list.html', context)
 
 # #To display a single post
 # def post_detail(request, id):
@@ -26,4 +26,4 @@ def post_detail(request, id):
                             status=Post.Status.PUBLISHED)
     
     context = {'post': post}
-    return render(request, 'blog/detail.html', context)
+    return render(request, 'post/detail.html', context)

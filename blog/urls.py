@@ -1,5 +1,6 @@
-from django.utils import path 
+from django.urls import path 
 from . models import Post 
+from . import views
 
 
 app_name = 'blog'  #a namespace used to organize our urls by application
