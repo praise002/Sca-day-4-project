@@ -6,7 +6,7 @@ from . models import Post
 def post_list(request):
     posts = Post.published.all()
     context = {'posts': posts}
-    return render(request, 'post/list.html', context)
+    return render(request, 'blog/post/list.html', context)
 
 # #To display a single post
 # def post_detail(request, id):
@@ -16,7 +16,7 @@ def post_list(request):
 #         raise Http404('No post found')
     
 #     context = {'post': post}
-#     return render(request, 'blog/detail.html', context)
+#     return render(request, 'blog/post/detail.html', context)
 
 #Method 2
 #To display a single post
@@ -26,4 +26,4 @@ def post_detail(request, id):
                             status=Post.Status.PUBLISHED)
     
     context = {'post': post}
-    return render(request, 'post/detail.html', context)
+    return render(request, 'blog/post/detail.html', context)

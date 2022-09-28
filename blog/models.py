@@ -13,6 +13,7 @@ class PublishedManager(models.Manager):
 class Post(models.Model):
     
     class Status(models.TextChoices):
+        #names|values|labels: choices
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PB', 'Published'
         #actual value | human readable
